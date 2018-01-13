@@ -24,9 +24,9 @@ $screen:750;
         position: absolute;
         left: 0;
         top: 0;
-        width: 1px;
+        width: 1px; /*px*/
         bottom: 0;
-        border-left: 1px $type $color;
+        border-left: 1px $type $color; /*px*/
         color: $color;
         transform-origin: 0 0;
         transform: scaleX(0.5);
@@ -39,9 +39,9 @@ $screen:750;
         position: absolute;
         right: 0;
         top: 0;
-        width: 1px;
+        width: 1px; /*px*/
         bottom: 0;
-        border-right: 1px $type $color;
+        border-right: 1px $type $color; /*px*/
         color: $color;
         transform-origin: 100% 0;
         transform: scaleX(0.5);
@@ -53,10 +53,10 @@ $screen:750;
         content: " ";
         position: absolute;
         left: 0;
-        top: -1px;
+        top: -1px; /*px*/
         right: 0;
-        height: 1px;
-        border-top: 1px $type $color;
+        height: 1px; /*px*/
+        border-top: 1px $type $color; /*px*/
         color: $color;
         transform-origin: 0 0;
         transform: scaleY(0.5);
@@ -70,8 +70,8 @@ $screen:750;
         left: 0;
         bottom: 0;
         right: 0;
-        height: 1px;
-        border-bottom: 1px $type $color;
+        height: 1px; /*px*/
+        border-bottom: 1px $type $color; /*px*/
         color: $color;
         transform-origin: 0 100%;
         transform: scaleY(0.5);
@@ -87,7 +87,7 @@ $screen:750;
         left: 50%;
         width: 200%;
         height: 200%;
-        border: 1px $type $color;
+        border: 1px $type $color; /*px*/
         border-radius: $radius;
         transform: translate(-50%, -50%) scale(.5);
     }
@@ -100,7 +100,7 @@ $screen:750;
     }
     &::-moz-placeholder {
         color: $color;
-        font-size: $fontsize;     
+        font-size: $fontsize;
     }
 }
 

@@ -25,40 +25,40 @@
 
     }
     .confirm-pop-main {
-        width: px2rem(540);
+        width: 540px;
         background: #fff;
-        border-radius: px2rem(20);
+        border-radius: 20px;
         overflow: hidden;
-        margin-bottom: px2rem(60);
+        margin-bottom: 60px;
         transition: all .2s;
         .confirm-pop-header {
-            padding: px2rem(40);
+            padding: 40px;
         }
         .confirm-pop-title {
-            font-size: 16px;
+            font-size: 32px;
             color: #3D3F52;
             text-align: center;
             font-weight: 600;
             line-height: 1;
         }
         .confirm-pop-content {
-            font-size: 14px;
+            font-size: 28px;
             color: #3D3F52;
             line-height: 1.5;
             text-align: center;
-            margin-top: px2rem(16);
+            margin-top: 16px;
         }
         .confirm-pop-footer {
             position: relative;
             width: 100%;
-            height: px2rem(88);
-            line-height: px2rem(88);
+            height: 88px;
+            line-height: 88px;
             @include one-top(#E3E5E9);
             .confirm-pop-btn {
                 position: relative;
                 flex: 1;
                 text-align: center;
-                font-size: 16px;
+                font-size: 32px;
                 height: 100%;
                 color: #3D3F52;
                 font-weight: 600;
