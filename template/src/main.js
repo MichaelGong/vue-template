@@ -7,7 +7,7 @@ import router from './router';
 import store from './store';
 import './assets/css/common.scss';
 import Confirm from './components/confirm/index';
-import Loading from './components/loading/index';
+import Loading from './plugins/loading/index';
 // import 'core-js/fn/array/includes';
 
 if (!window.Promise) {
@@ -23,8 +23,7 @@ Vue.config.productionTip = false;
 Vue.$confirm = Confirm;
 Vue.prototype.$confirm = Confirm;
 
-Vue.$loading = Loading;
-Vue.prototype.$loading = Loading;
+Vue.use(Loading);
 
 /* eslint-disable no-new */
 new Vue({
