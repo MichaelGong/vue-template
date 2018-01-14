@@ -10,6 +10,7 @@ import './assets/css/common.scss';
 import Confirm from './plugins/confirm/index';
 import Loading from './plugins/loading/index';
 import filters from './filters';
+import directives from './directives';
 
 if (!window.Promise) {
   window.Promise = Promise;
@@ -20,8 +21,10 @@ Vue.config.productionTip = false;
 
 Vue.use(Confirm);
 Vue.use(Loading);
-// 注册过滤器
-Object.keys(filters).forEach(filter => Vue.filter(filter, filters[filter]));
+// 注册全局指令
+Object.keys(directives).forEach(d => Vue.directive(d, directives[d]));
+// 注册全局过滤器
+Object.keys(filters).forEach(f => Vue.filter(f, filters[f]));
 
 /* eslint-disable no-new */
 new Vue({

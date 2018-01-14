@@ -1,9 +1,10 @@
 <template>
 <section>
   <HelloWorld></HelloWorld>
-  <h1>Hello World! {{name}}</h1>
+  <h1 v-color>Hello World! {{name}}</h1>
   <div @click="showConfirm">Show Confirm</div>
   <div @click="showLoading">Show Loading</div>
+  <input v-focus type="text">
 </section>
 </template>
 <script>
@@ -64,6 +65,8 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
+input {
+  border: 1px solid #00ff00;
+}
 </style>
 
