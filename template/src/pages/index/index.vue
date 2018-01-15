@@ -4,19 +4,22 @@
   <h1 v-color>Hello World! {{name}}</h1>
   <div @click="showConfirm">Show Confirm</div>
   <div @click="showLoading">Show Loading</div>
-  <input v-focus type="text">
+  <input v-focus type="text" @input="inputHandler" placeholder="只能输入数字">
+  <router-link to="detail" tag="div">去详情页</router-link>
 </section>
 </template>
 <script>
 import { mapGetters, mapActions, mapMutations } from 'vuex';
 import HelloWorld from '@/components/HelloWorld';
 import types from '@/store/modules/index/mutation-types';
+import mixins from '@/mixins';
 
 export default {
   name: 'index',
   components: {
     HelloWorld,
   },
+  mixins: [mixins],
   computed: {
     ...mapGetters('index', [
       'name',
@@ -53,6 +56,9 @@ export default {
         this.$loading.close();
       }, 2000);
     },
+    inputHandler(event) {
+      event.target.value = this.onlyNumber(event.target.value);
+    }
   },
   created() {
     setTimeout(() => {
