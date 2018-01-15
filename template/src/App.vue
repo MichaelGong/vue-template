@@ -1,6 +1,5 @@
 <template>
   <div class="app">
-    <img src="./assets/images/vuelogo.png">
       <transition :name="'vux-pop-' + (isBack ? 'out' : 'in')">
         <router-view class="router-view"></router-view>
       </transition>
@@ -16,11 +15,10 @@ export default {
     };
   },
   watch: {
-    '$router'(to) {
-      console.log('this.$router.isBack:', this.$router.isBack);
+    '$route'() {
       this.isBack = this.$router.isBack;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -46,9 +44,9 @@ html, body {
 */
 .router-view {
   width: 100%;
-  animation-duration: 50s;
+  animation-duration: .5s;
   animation-fill-mode: both;
-  /* backface-visibility: hidden; */
+  // /* backface-visibility: hidden; */
   background: red;
 }
 .vux-pop-out-enter-active,

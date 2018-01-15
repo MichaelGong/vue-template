@@ -4,7 +4,7 @@
   <h1 v-color>Hello World! {{name}}</h1>
   <div @click="showConfirm">Show Confirm</div>
   <div @click="showLoading">Show Loading</div>
-  <input v-focus type="text" @input="inputHandler" placeholder="只能输入数字">
+  <!-- <input v-focus type="text" @input="inputHandler" placeholder="只能输入数字"> -->
   <router-link to="detail" tag="div">去详情页</router-link>
 </div>
 </template>
