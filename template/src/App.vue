@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-      <transition :name="'vux-pop-' + (isBack ? 'out' : 'in')">
+      <transition :name="'biu-pop-' + (isBack ? 'out' : 'in')">
         <router-view class="router-view"></router-view>
       </transition>
   </div>
@@ -23,22 +23,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  position: relative;
-} */
-body {
-  background-color: #fbf9fe;
-}
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
 /**
 * vue-router transition
 */
@@ -46,29 +30,28 @@ html, body {
   width: 100%;
   animation-duration: .5s;
   animation-fill-mode: both;
-  // /* backface-visibility: hidden; */
-  background: red;
+  backface-visibility: hidden;
 }
-.vux-pop-out-enter-active,
-.vux-pop-out-leave-active,
-.vux-pop-in-enter-active,
-.vux-pop-in-leave-active {
+.biu-pop-out-enter-active,
+.biu-pop-out-leave-active,
+.biu-pop-in-enter-active,
+.biu-pop-in-leave-active {
   will-change: transform;
   height: 100%;
   position: absolute;
   left: 0;
 }
-.vux-pop-out-enter-active {
+.biu-pop-out-enter-active {
   animation-name: popInLeft;
 }
-.vux-pop-out-leave-active {
+.biu-pop-out-leave-active {
   animation-name: popOutRight;
 }
-.vux-pop-in-enter-active {
+.biu-pop-in-enter-active {
   perspective: 1000;
   animation-name: popInRight;
 }
-.vux-pop-in-leave-active {
+.biu-pop-in-leave-active {
   animation-name: popOutLeft;
 }
 @keyframes popInLeft {

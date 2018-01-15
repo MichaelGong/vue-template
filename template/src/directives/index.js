@@ -1,5 +1,4 @@
 import color from './color';
-import focus from './focus';
 // 自动识别当前目录下的js文件
 // const files = require.context('./', true, /^\.\/([\w\W]*)\.js$/);
 // const directives = {};
@@ -10,5 +9,4 @@ import focus from './focus';
 
 export default {
   color,
-  focus,
 };
