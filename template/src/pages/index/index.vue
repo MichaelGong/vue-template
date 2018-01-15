@@ -1,12 +1,12 @@
 <template>
-<section>
+<div class="index">
   <HelloWorld></HelloWorld>
   <h1 v-color>Hello World! {{name}}</h1>
   <div @click="showConfirm">Show Confirm</div>
   <div @click="showLoading">Show Loading</div>
   <input v-focus type="text" @input="inputHandler" placeholder="只能输入数字">
   <router-link to="detail" tag="div">去详情页</router-link>
-</section>
+</div>
 </template>
 <script>
 import { mapGetters, mapActions, mapMutations } from 'vuex';
@@ -61,16 +61,19 @@ export default {
     }
   },
   created() {
-    setTimeout(() => {
-      this[types.SET_NAME]({ name: 'index name' });
-      setTimeout(() => {
-        this.setName({ name: 'index name2' });
-      });
-    }, 2000);
+    // setTimeout(() => {
+    //   this[types.SET_NAME]({ name: 'index name' });
+    //   setTimeout(() => {
+    //     this.setName({ name: 'index name2' });
+    //   });
+    // }, 2000);
   },
 };
 </script>
 <style lang="scss" scoped>
+.index {
+  margin-top: 15px;
+}
 input {
   border: 1px solid #00ff00;
 }
