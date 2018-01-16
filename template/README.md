@@ -1,4 +1,4 @@
-# {{ projectName }}
+# {{ projectName }} by biu-cli
 
 > {{ projectDesc }}
 
