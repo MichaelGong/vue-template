@@ -1,13 +1,10 @@
 {
-  "name": "vue-template",
-  "version": "0.0.1",
-  "description": "vue模板项目",
-  "main": "index.js",
-  "repository": "git@github.com:MichaelGong/vue-template.git",
-  "author": "gonghao",
-  "license": "MIT",
+  "name": "{{ projectName }}",
+  "version": "{{ projectVersion }}",
+  "description": "{{ projectDesc }}",
+  "author": "{{ author }}",
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --open --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
