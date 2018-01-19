@@ -10,7 +10,18 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/proxy/*': {
+        target: 'http://xxx.com', // 需要请求的接口host或前缀
+        changeOrigin: true,
+        // autoRewrite: true,
+        pathRewrite: {'^/proxy' : ''},
+        headers: {
+          Host: 'xxx.com', // 需要请求的接口host或前缀
+          Origin: 'http://xxx.xxx.com' // 前端页面的host
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
@@ -20,7 +31,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
