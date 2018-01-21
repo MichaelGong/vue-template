@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-      <transition :name="'biu-pop-' + (isBack ? 'out' : 'in')">
-        <router-view class="router-view"></router-view>
-      </transition>
+    <transition :name="'biu-pop-' + (isBack ? 'out' : 'in')">
+      <router-view class="router-view"></router-view>
+    </transition>
   </div>
 </template>
 
@@ -28,9 +28,11 @@ export default {
 */
 .router-view {
   width: 100%;
+  height: 100%;
   animation-duration: .5s;
   animation-fill-mode: both;
   backface-visibility: hidden;
+  animation-timing-function: linear;
 }
 .biu-pop-out-enter-active,
 .biu-pop-out-leave-active,

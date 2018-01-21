@@ -32,8 +32,12 @@ router.beforeEach((to, from, next) => {
     router.isBack = false;
   }
   setTitle(to.matched[to.matched.length - 1].meta.title || '');
-  Vue.$loading.close();
+  Vue.$loading.show();
   next();
+});
+
+router.afterEach(() => {
+  Vue.$loading.close();
 });
 
 export default router;

@@ -74,6 +74,7 @@ export default {
 .index {
   font-size: 32px;
   padding: 10px;
+  text-align: center;
 }
 input {
   border: 1px solid #00ff00;

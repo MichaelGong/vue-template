@@ -49,8 +49,10 @@ export default {
       },
       close() {
         if (instance) {
-          instance.isShow = false;
-          toggleFilterToApp(false);
+          Vue.nextTick(() => {
+            instance.isShow = false;
+            toggleFilterToApp(false);
+          });
         }
       },
     };
