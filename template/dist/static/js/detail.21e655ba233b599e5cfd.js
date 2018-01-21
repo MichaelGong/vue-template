@@ -1,2 +1,0 @@
-webpackJsonp([1],{"/Fln":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a={render:function(){var e=this.$createElement;return(this._self._c||e)("section",{staticClass:"detail"},[this._v("\n  详情页\n")])},staticRenderFns:[]};var s=n("VU/8")({name:"detail"},a,!1,function(e){n("afVx")},"data-v-6e742608",null);t.default=s.exports},afVx:function(e,t){}});
-//# sourceMappingURL=../map/detail.21e655ba233b599e5cfd.js.map
