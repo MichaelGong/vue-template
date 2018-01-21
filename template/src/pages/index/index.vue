@@ -6,6 +6,10 @@
   <div @click="showLoading">Show Loading</div>
   <input type="text" @input="inputHandler" placeholder="只能输入数字">
   <router-link to="detail" tag="div">去详情页</router-link>
+  <skeleton-item w="random"></skeleton-item>
+  <skeleton-item w="80%" mb="20px"></skeleton-item>
+  <skeleton-item w="random"></skeleton-item>
+  <skeleton-item w="80%" mb="15px"></skeleton-item>
 </div>
 </template>
 <script>
@@ -79,5 +83,27 @@ export default {
 input {
   border: 1px solid #00ff00;
 }
+.skeleton {
+  &-bg {
+    width: 100%;
+    height: 30px;
+    // animation: shellPulse 2s infinite linear;
+    background: rgb(246, 246, 246);
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+@keyframes shellPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 </style>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <transition :name="'biu-pop-' + (isBack ? 'out' : 'in')">
+    <transition :name="'biu-pop-' + (isBack === undefined ? '' : (isBack ? 'out' : 'in'))">
       <router-view class="router-view"></router-view>
     </transition>
   </div>

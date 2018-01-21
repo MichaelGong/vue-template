@@ -1,43 +1,27 @@
 @import "./mix.scss";
 @import "./reset.css";
-// * {
-//     tap-highlight-color: transparent;
-//     -webkit-tap-highlight-color: transparent;
-//     -ms-tap-highlight-color: transparent;
-// }
+* {
+  tap-highlight-color: transparent;
+}
 * {
   margin: 0;
   padding: 0;
 }
 
 html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  // -webkit-text-size-adjust: 100%;
-  // background: #fff;
-  // // min-width: 320px;
-  // // margin: auto;
-  // // height: 100%;
-  // width: 100%;
-  // // overflow-x: hidden;
-  // -webkit-overflow-scrolling: touch;
-  // overflow-scrolling: touch;
-  margin: auto;
-  max-width: 640px;
-  /*no*/
+  text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
-  font-family: PingFangSC, "Microsoft YaHei", Helvetica, "Droid Sans", Arial, sans-serif;
   user-select: none;
+  font-family: PingFangSC, "Microsoft YaHei", Helvetica, "Droid Sans", Arial, sans-serif;
+  line-height: 1.2;
 }
-
+[v-cloak] {
+  visibility: hidden
+}
 body {
-  line-height: 1.6;
-  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+  margin: auto;
+  max-width: 640px; /*no*/
 }
-
 html,
 body,
 #app,

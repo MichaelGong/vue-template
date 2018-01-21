@@ -7,6 +7,7 @@ import store from './store';
 import './assets/css/common.scss';
 import Confirm from './plugins/confirm/index';
 import Loading from './plugins/loading/index';
+import SkeletonItem from './plugins/skeleton/index';
 import filters from './filters';
 import directives from './directives';
 
@@ -19,6 +20,8 @@ Vue.config.productionTip = false;
 
 Vue.use(Confirm);
 Vue.use(Loading);
+Vue.use(SkeletonItem);
+
 // 注册全局指令
 Object.keys(directives).forEach(d => Vue.directive(d, directives[d]));
 // 注册全局过滤器

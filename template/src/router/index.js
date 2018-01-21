@@ -31,6 +31,9 @@ router.beforeEach((to, from, next) => {
     }
     router.isBack = false;
   }
+  if (!from.name) {
+    router.isBack = undefined;
+  }
   setTitle(to.matched[to.matched.length - 1].meta.title || '');
   Vue.$loading.show();
   next();
