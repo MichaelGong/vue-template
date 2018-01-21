@@ -33,64 +33,64 @@ export default {
   animation-fill-mode: both;
   backface-visibility: hidden;
   animation-timing-function: linear;
-}
-.biu-pop-out-enter-active,
-.biu-pop-out-leave-active,
-.biu-pop-in-enter-active,
-.biu-pop-in-leave-active {
-  will-change: transform;
-  height: 100%;
-  position: absolute;
-  left: 0;
-}
-.biu-pop-out-enter-active {
-  animation-name: popInLeft;
-}
-.biu-pop-out-leave-active {
-  animation-name: popOutRight;
-}
-.biu-pop-in-enter-active {
-  perspective: 1000;
-  animation-name: popInRight;
-}
-.biu-pop-in-leave-active {
-  animation-name: popOutLeft;
+  // perspective: 1000;
+  &.biu-pop-out-enter-active,
+  &.biu-pop-out-leave-active,
+  &.biu-pop-in-enter-active,
+  &.biu-pop-in-leave-active {
+    will-change: transform;
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+  &.biu-pop-out-enter-active {
+    animation-name: popInLeft;
+  }
+  &.biu-pop-out-leave-active {
+    animation-name: popOutRight;
+  }
+  &.biu-pop-in-enter-active {
+    animation-name: popInRight;
+  }
+  &.biu-pop-in-leave-active {
+    animation-name: popOutLeft;
+  }
 }
 @keyframes popInLeft {
   from {
-    opacity: 0;
+    // opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
   to {
-    opacity: 1;
+    // opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
 @keyframes popOutLeft {
   from {
-    opacity: 1;
+    // opacity: 1;
   }
   to {
-    opacity: 0;
+    // opacity: 0;
     transform: translate3d(-100%, 0, 0);
   }
 }
 @keyframes popInRight {
   from {
-    opacity: 0;
+    // opacity: 0;
     transform: translate3d(100%, 0, 0);
   }
   to {
-    opacity: 1;
+    // opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
 @keyframes popOutRight {
   from {
-    opacity: 1;
+    // opacity: 1;
   }
   to {
-    opacity: 0;
+    // opacity: 0;
     transform: translate3d(100%, 0, 0);
   }
 }
