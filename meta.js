@@ -1,26 +1,30 @@
 module.exports = {
-  prompts: [
-    {
+  prompts: {
+    projectName: {
       name: 'projectName',
       message: '请输入项目名称',
       type: 'input',
-      default: projectName,
-    }, {
+      // default: projectName,
+    },
+    projectVersion: {
       name: 'projectVersion',
       message: '请输入项目版本号',
       type: 'input',
       default: '0.0.1',
-    }, {
+    },
+    projectDesc: {
       name: 'projectDesc',
       message: '请输入项目描述',
       type: 'input',
       default: 'A vue project',
-    }, {
+    },
+    author: {
       name: 'author',
       message: '请输入作者',
       type: 'input',
-      default: gitUser,
-    }, {
+      // default: gitUser,
+    },
+    install: {
       name: 'install',
       message: '请选择依赖安装方式',
       type: 'list',
@@ -32,5 +36,5 @@ module.exports = {
         return 'not';
       },
     },
-  ]
+  }
 }
