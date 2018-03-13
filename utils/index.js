@@ -14,7 +14,7 @@ function installDependencies(
   color = chalk.green
 ) {
   console.log(`\n\n# ${color('Installing project dependencies ...')}`)
-  console.log('# ========================')
+  console.log('# ========================\n')
   return runCommand(executable, ['install'], {
     cwd,
   })
