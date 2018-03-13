@@ -1,3 +1,5 @@
+const { installDependencies } = require('./utils');
+
 module.exports = {
   prompts: {
     projectName: {
@@ -36,5 +38,10 @@ module.exports = {
         return 'not';
       },
     },
+  },
+  complete: function(data) {
+    if (data.metaData.install && data.metaData.install != 'not') {
+      installDependencies(data.projectPath, data.metaData.install)
+    }
   }
 }
