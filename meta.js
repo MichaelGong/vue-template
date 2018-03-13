@@ -40,8 +40,15 @@ module.exports = {
     },
   },
   complete: function(data) {
-    if (data.metaData.install && data.metaData.install != 'not') {
-      installDependencies(data.projectPath, data.metaData.install)
-    }
+    return new Promise((resolve, reject) => {
+      if (data.metaData.install && data.metaData.install != 'not') {
+        installDependencies(data.projectPath, data.metaData.install).then(() => {
+          resolve();
+        });
+      } else {
+        resolve();
+      }
+    });
+
   }
 }
