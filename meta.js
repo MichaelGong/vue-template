@@ -43,7 +43,6 @@ module.exports = {
     return new Promise((resolve, reject) => {
       if (data.metaData.install && data.metaData.install != 'not') {
         installDependencies(data.projectPath, data.metaData.install).then(() => {
-          console.log('end')
           resolve();
         });
       } else {
